@@ -20,7 +20,7 @@ class MainApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate
       ],
       supportedLocales: [Locale('en'), Locale('vi')],
-      locale: Locale('en'),
+      locale: Locale('vi'),
       home: EventView(),
     );
   }
