@@ -1,4 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
 class EventModel {
@@ -13,8 +12,8 @@ class EventModel {
     this.id,
     required this.startTime,
     required this.endTime,
-    this.isAllDay = false,
-    this.subject = "",
+    this.isAllDay = false, //mac dinh
+    this.subject = '',
     this.notes,
     this.recurrenceRule,
   });
@@ -72,7 +71,7 @@ class EventModel {
 
   @override
   String toString() {
-    return 'EventModel(id: $id, starTime: $startTime, endTime: $endTime, isAllDay: $isAllDay, subject: $subject, notes: $notes, recurrenceRule: $recurrenceRule)';
+    return 'EventModel(id: $id, startTime: $startTime, endTime: $endTime, isAllDay: $isAllDay, subject: $subject, notes: $notes, recurrenceRule: $recurrenceRule)';
   }
 
   @override
@@ -100,7 +99,7 @@ class EventModel {
   }
 }
 
-extension ExEventModel on EventModel {
+extension ExtEventModel on EventModel {
   String get formatedStartTimeString =>
       '${startTime.hour}:${startTime.minute}, ${startTime.day}/${startTime.month}/${startTime.year}';
   String get formatedEndTimeString =>
